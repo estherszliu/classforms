@@ -2,6 +2,10 @@ import React from "react";
 
 export default class SocialCardForm extends React.Component{
 
+
+
+	
+
 	render(){
 		return (
 			<section className="socialCardForm">
@@ -12,6 +16,7 @@ export default class SocialCardForm extends React.Component{
 					className="postContent" 
 					value={this.props.content} 
 					onChange={(event) => {
+						console.log(event.target.name, event.target.value);
 						this.props.setParentState(event.target.name, event.target.value);
 					}}
 				/>
